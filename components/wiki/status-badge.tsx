@@ -12,6 +12,9 @@ const statusBadgeVariants = cva(
         planned: 'bg-blue-500/15 text-blue-400 ring-1 ring-blue-500/30',
         deprecated: 'bg-red-500/15 text-red-400 ring-1 ring-red-500/30',
         draft: 'bg-slate-500/15 text-slate-400 ring-1 ring-slate-500/30',
+        confirmed: 'bg-emerald-500/15 text-emerald-400 ring-1 ring-emerald-500/30',
+        consensus: 'bg-violet-500/15 text-violet-400 ring-1 ring-violet-500/30',
+        experimental: 'bg-orange-500/15 text-orange-400 ring-1 ring-orange-500/30',
       },
     },
     defaultVariants: {
@@ -31,6 +34,9 @@ const defaultLabels: Record<NonNullable<VariantProps<typeof statusBadgeVariants>
   planned: 'Planned',
   deprecated: 'Deprecated',
   draft: 'Draft',
+  confirmed: 'Confirmed',
+  consensus: 'Community Consensus',
+  experimental: 'Experimental',
 }
 
 export function StatusBadge({ status = 'draft', label, className }: StatusBadgeProps) {
