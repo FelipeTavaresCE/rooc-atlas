@@ -1,12 +1,16 @@
 import type { WikiHero } from '@/types/wiki'
 
 export const whitesmithHero: WikiHero = {
-  eyebrow: 'Class Wiki',
+  eyebrow: 'ROOC Atlas · Premium Class Guide',
   title: 'Whitesmith',
-  subtitle: 'Weapon Merchant — Blacksmith 3rd Class',
+  subtitle: 'Build Overview',
   description:
-    'Track the core Whitesmith knowledge base here, including future build paths, equipment targets, progression systems, and matchup planning once validated game data is ready.',
-  status: 'wip',
-  badges: [{ label: 'Confirmed', variant: 'confirmed' }],
+    'A premium overview shell for the Whitesmith build journey, ready to receive validated strategy, progression, and investment content without changing the page structure.',
+  status: 'draft',
+  badges: [
+    { label: 'Content Ready', variant: 'confirmed' },
+    { label: 'Validation Pending', variant: 'planned' },
+    { label: 'Reusable Layout', variant: 'confirmed' },
+  ],
   backgroundVariant: 'glow',
 }

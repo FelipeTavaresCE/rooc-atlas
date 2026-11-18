@@ -1,4 +1,11 @@
-import { ChartBar, Coins, Shield, Swords, TrendingUp, Trophy } from 'lucide-react'
+import {
+  ChartBar,
+  Coins,
+  Shield,
+  Swords,
+  TrendingUp,
+  Trophy,
+} from 'lucide-react'
 
 import type { WikiOverview } from '@/types/wiki'
 
@@ -9,14 +16,20 @@ export const whitesmithOverview: WikiOverview = {
       badge: 'wip',
       body: [
         'Core role, stat priorities, and content suitability will be documented here once game data is verified.',
-        'Content placeholder: production game data and verified recommendations will be added here.',
+        {
+          text: 'Content placeholder: production game data and verified recommendations will be added here.',
+          placeholder: true,
+        },
       ],
     },
     {
       title: 'Progression Priorities',
       body: [
         'Reserve this section for milestone planning across gear, systems, and party utility.',
-        'Content placeholder: production game data and verified recommendations will be added here.',
+        {
+          text: 'Content placeholder: production game data and verified recommendations will be added here.',
+          placeholder: true,
+        },
       ],
     },
   ],

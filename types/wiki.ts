@@ -25,9 +25,60 @@ export type WikiAttribute = {
 
 export type WikiTextSection = {
   title: string
-  body: string[]
+  body: Array<string | { text: string; placeholder?: boolean }>
   badge?: WikiStatus
 }
+
+export type WikiPageSection =
+  | {
+      type: 'placeholder'
+      title: string
+      badge?: WikiStatus
+      description: string
+      placeholderTitle: string
+      placeholderDescription: string
+    }
+  | {
+      type: 'cards'
+      title: string
+      badge?: WikiStatus
+      description: string
+      items: Array<{ title: string; description: string; icon?: LucideIcon }>
+    }
+  | {
+      type: 'timeline'
+      title: string
+      badge?: WikiStatus
+      description: string
+      items: Array<{ title: string; description: string }>
+    }
+  | {
+      type: 'priorities'
+      title: string
+      badge?: WikiStatus
+      description: string
+      items: string[]
+    }
+  | {
+      type: 'list'
+      title: string
+      badge?: WikiStatus
+      description: string
+      listTitle: string
+      items: string[]
+    }
+  | {
+      type: 'reading'
+      title: string
+      badge?: WikiStatus
+      description: string
+      items: Array<{
+        title: string
+        description: string
+        href: string
+        icon?: LucideIcon
+      }>
+    }
 
 // ── Roadmap milestone ─────────────────────────────────────────────────────────
 
@@ -68,4 +119,5 @@ export type WikiPage = {
   hero: WikiHero
   overview: WikiOverview
   roadmap: WikiRoadmap
+  sections?: WikiPageSection[]
 }
